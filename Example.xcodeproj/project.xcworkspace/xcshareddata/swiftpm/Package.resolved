@@ -1,0 +1,42 @@
+{
+  "originHash" : "8a288b1674f3599a9cd14af4875c38884a394e969298b7da616fc882c47d9731",
+  "pins" : [
+    {
+      "identity" : "llm.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/eastriverlee/LLM.swift/",
+      "state" : {
+        "revision" : "4c4e909ac4758c628c9cd263a0c25b6edff5526d",
+        "version" : "2.0.1"
+      }
+    },
+    {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-syntax.git",
+      "state" : {
+        "revision" : "21b3b45635decd1a0b89968f81b6d9a93128f773",
+        "version" : "602.0.0-prerelease-2025-08-11"
+      }
+    },
+    {
+      "identity" : "wwhud",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/William-Weng/WWHUD",
+      "state" : {
+        "revision" : "c60fc05a3033eafa736bd591e7041d79b5f6f209",
+        "version" : "1.4.0"
+      }
+    },
+    {
+      "identity" : "wwprint",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/William-Weng/WWPrint",
+      "state" : {
+        "revision" : "8f5928f5d36624d77f8fc563fd8e31a59cfac6b6",
+        "version" : "1.3.1"
+      }
+    }
+  ],
+  "version" : 3
+}
