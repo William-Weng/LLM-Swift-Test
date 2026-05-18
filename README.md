@@ -4,4 +4,4 @@
 ## [模型下載](https://huggingface.co)
 - [Qwen1.5-0.5B-Chat-GGUF](https://huggingface.co/Qwen/Qwen1.5-0.5B-Chat-GGUF)
 
-![](Example.png)
+https://github.com/user-attachments/assets/6e7dfe3a-42a7-4dc5-af78-072c0f0e65e6
