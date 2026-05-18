@@ -1,4 +1,4 @@
-# LLM-Swift-Test
+# [LLM-Swift-Test](https://repos.ecosyste.ms/hosts/GitHub/repositories/eastriverlee%2FLLM.swift/releases)
 - [使用LLM.swift測試.gguf的AI模型](https://ywctech.net/ml-ai/ollama-import-custom-gguf/)
 
 ## [模型下載](https://huggingface.co)

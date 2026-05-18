@@ -1,5 +1,5 @@
 {
-  "originHash" : "8a288b1674f3599a9cd14af4875c38884a394e969298b7da616fc882c47d9731",
+  "originHash" : "548bcd690a2867a1c20aaea2d4d00c03b5e43581eda3aa32adf35dbc04668769",
   "pins" : [
     {
       "identity" : "llm.swift",
@@ -26,15 +26,6 @@
       "state" : {
         "revision" : "c60fc05a3033eafa736bd591e7041d79b5f6f209",
         "version" : "1.4.0"
-      }
-    },
-    {
-      "identity" : "wwprint",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/William-Weng/WWPrint",
-      "state" : {
-        "revision" : "8f5928f5d36624d77f8fc563fd8e31a59cfac6b6",
-        "version" : "1.3.1"
       }
     }
   ],

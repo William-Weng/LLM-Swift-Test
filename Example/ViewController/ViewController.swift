@@ -6,14 +6,17 @@
 //
 
 import UIKit
-import LLM
-import WWPrint
 import WWHUD
+import LLM
 
 // MARK: - ViewController
 final class ViewController: UIViewController {
 
+    @IBOutlet weak var promptTextField: UITextField!
+    @IBOutlet weak var llmTextTextView: UITextView!
+    
     private var bot: LLM?
+    private let gguf: String = "qwen1_5-0_5b-chat-q2_k.gguf"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +28,8 @@ final class ViewController: UIViewController {
         WWHUD.shared.display()
         
         Task {
-            
             WWHUD.shared.closeLabelSetting(title: "關閉")
-            
-            let prompt = "你會說日文嗎?可以當我的日文老師嗎？說一句日文聽聽"
-            await demo(prompt: prompt)
-            
+            await demo(prompt: promptTextField.text)
             WWHUD.shared.dismiss()
         }
     }
@@ -49,26 +48,30 @@ private extension ViewController {
 
     func initBot() {
         
-        guard let bot = llmMaker() else { wwPrint("error"); return }
+        guard let bot = llmMaker(gguf: gguf) else { llmTextTextView.text = "LLM Model error"; return }
         self.bot = bot
         
         WWHUD.shared.delegate = self
     }
     
-    func demo(prompt: String) async {
+    func demo(prompt: String?) async {
         
-        guard let bot else { wwPrint("error"); return }
+        guard let prompt = prompt,
+              let bot
+        else {
+            llmTextTextView.text = "Bot error"; return
+        }
         
         let question = bot.preprocess(prompt, [])
         let answer = await bot.getCompletion(from: question)
         
         bot.stop()
-        wwPrint(answer)
+        llmTextTextView.text = answer
     }
     
-    func llmMaker() -> LLM? {
+    func llmMaker(gguf: String) -> LLM? {
         
-        guard let gguflUrl = Bundle.main.url(forResource: "qwen1_5-0_5b-chat-q2_k", withExtension: "gguf") else { return nil }
+        guard let gguflUrl = Bundle.main.url(forResource: gguf, withExtension: nil) else { return nil }
         return LLM(from: gguflUrl, template: .chatML())
     }
 }
